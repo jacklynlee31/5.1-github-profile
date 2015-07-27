@@ -1,0 +1,20 @@
+{
+  "name": "5.1-github-profile",
+  "version": "0.0.0",
+  "authors": [
+    "Jacklyn Carroll <jacklynlee31@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "neat": "~1.7.2",
+    "reset-css": "~2.0.2011012602"
+  }
+}
