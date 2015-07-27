@@ -3,10 +3,35 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    	<link rel="stylesheet" href="style.css">
+    	<link rel="stylesheet" href="app.css">
     <title>GitHub Profile</title>
 </head>
 <body>
 
+<div class="profile"></div>
+
+<template id="profile-temp">
+	<span>{{ name }}</span>
+	<span>{{ blog }}</span>
+	<span>{{ location }}</span>
+	<span>{{ email }}</span>
+	<img src="{{ avatar_url }}">
+	<span>{{ html_url }}</span>
+</template>
+
+<div class="repo"></div>
+
+<template id="repo-temp">
+	<span>{{ name }}</span>
+	<span>{{ url }}</span>
+	<span>{{ updated_at }}</span>
+	<span>{{ language }}</span>
+	<span>{{ stargazers_count }}</span>
+	<span>{{ forks_count }}</span>
+</template>
+
+<script src="jquery/dist/jquery.min.js"></script>
+<script src="handlebars/handlebars.js"></script>
+<script src="app.js"></script>
 </body>
 </html>
