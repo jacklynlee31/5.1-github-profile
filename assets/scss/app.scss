@@ -1,3 +1,15 @@
+@import 'reset';
+
+@import 'bourbon';
+@import 'neat';
+
+@import 'octicons';
+
+$gray: #F2F2F2;
+$blue: #3262B3;
+$green: #79D758;
+// #4C9C32 (dark green)
+
 html {
   box-sizing: border-box;
 }

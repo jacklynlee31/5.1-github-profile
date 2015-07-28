@@ -4,9 +4,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     	<link rel="stylesheet" href="app.css">
+    	 <link rel="stylesheet" href="bower_components/octicons/octicons/octicons.css">
     <title>GitHub Profile</title>
 </head>
 <body>
+
+<div class="top-nav">
+	<span class="octicon octicon-mark-github"></span>
+</div>
 
 <div class="profile"></div>
 
@@ -16,7 +21,7 @@
 	<span>{{ location }}</span>
 	<span>{{ email }}</span>
 	<img src="{{ avatar_url }}">
-	<span>{{ html_url }}</span>
+<!-- 	<span>joindate</span> -->
 </template>
 
 <div class="repo"></div>
