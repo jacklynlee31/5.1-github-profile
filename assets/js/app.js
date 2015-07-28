@@ -5,23 +5,21 @@
   var p = Handlebars.compile(profileTemplate);
   var r = Handlebars.compile(repoTemplate);
 
-  $.ajax({
-  	url: 'https://api.github.com/users/jacklynlee31',
-  	dataType: 'json',
-		success: function(data) {
-			var ht = p(data);
-			$('.profile').html(ht);
-		}
-	});
+  var apiUrl = 'https://api.github.com/users/jacklynlee31';
 
   $.ajax({
-  	url: 'https://api.github.com/users/jacklynlee31/repos',
-  	dataType: 'json',
-		success: function(data) {
-			var ht = r(data);
-			$('.repo').html(ht);
-		}
+  url: apiUrl,
+  success: function(data) {
+    var ht = p(data);
+    $('.profile').html(ht);
+  }
 	});
 
-
+  $.ajax ({
+    url: 'https://api.github.com/users/jacklynlee31/repos',
+    success: function(data) {
+      var results = r(data);
+      $('.repo').html(results);
+    }
+  });
 })();

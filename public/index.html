@@ -4,35 +4,46 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     	<link rel="stylesheet" href="app.css">
-    	 <link rel="stylesheet" href="bower_components/octicons/octicons/octicons.css">
+    	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/2.4.1/octicons.css">
     <title>GitHub Profile</title>
 </head>
 <body>
 
 <div class="top-nav">
-	<span class="octicon octicon-mark-github"></span>
+	<span class="mega-octicon octicon-mark-github"></span>
+	<input type="text" value="Search GitHub">
+	<ul>
+		<li>Pull Requests</li>
+		<li>Issues</li>
+		<li>Gist</li>
+	</ul>
 </div>
 
 <div class="profile"></div>
 
 <template id="profile-temp">
-	<span>{{ name }}</span>
-	<span>{{ blog }}</span>
-	<span>{{ location }}</span>
-	<span>{{ email }}</span>
-	<img src="{{ avatar_url }}">
-<!-- 	<span>joindate</span> -->
+	<div class="left-sidebar">
+		<span>{{ name }}</span>
+		<span>{{ blog }}</span>
+		<span>{{ location }}</span>
+		<span>{{ email }}</span>
+		<img src="{{ avatar_url }}">
+	</div>
 </template>
 
 <div class="repo"></div>
 
 <template id="repo-temp">
-	<span>{{ name }}</span>
-	<span>{{ url }}</span>
-	<span>{{ updated_at }}</span>
-	<span>{{ language }}</span>
-	<span>{{ stargazers_count }}</span>
-	<span>{{ forks_count }}</span>
+	<div class="main">
+		{{#each this as |repos|}}
+		<span>{{ repos.name }}</span>
+		<!-- <span>{{ repos.url }}</span> -->
+		<!-- <span>{{ repos.updated_at }}</span> -->
+		<span>{{ repos.language }}</span>
+		<span>{{ repos.stargazers_count }}</span>
+		<span>{{ repos.forks_count }}</span>
+		{{/each}}
+	</div>
 </template>
 
 <script src="jquery/dist/jquery.min.js"></script>
