@@ -10,6 +10,7 @@ $green: #79D758;
 
 html {
   box-sizing: border-box;
+  font-family: helvetica;
 }
 *, *:before, *:after {
   box-sizing: inherit;
@@ -18,30 +19,55 @@ html {
 	background-color: $gray;
 	font-family: helvetica;
 	font-size: 14px;
+	text-align: center;
+	padding-top: 5px;
 	height: 50px;
 	border-bottom: darken($gray, 10%) solid 1px;
 }
-.octicon {
-	display: inline;
-}
-.top-nav ul li {
-	display: inline;
-	font-weight: bold;
-}
-input {
+.search {
 	color: darken($gray, 10%);
 	width: 300px;
 	height: 25px;
 	border: darken($gray, 10%) solid 1px;
 	border-radius: 3px;
 }
-.left-sidebar {
-	color: red;
+.top-links {
+	display: inline;
 }
 .main {
-	color: purple;
+	padding-top: 5em;
+	@include outer-container(1020px);
 }
-img {
-	width: 100px;
-	display: none;
+.left {
+	@include span-columns(3);
+}
+.left-one {
+	//stuff
+}
+.left-one img {
+	width: 250px;
+}
+.left-two {
+	//stuff
+}
+.top-main {
+	//stuff
+}
+.top-main-links {
+	display: inline;
+}
+.search2 {
+	color: darken($gray, 10%);
+	border: darken($gray, 10%) solid 1px;
+	border-radius: 3px;
+	display: block;
+}
+.main-search {
+	display: inline;
+}
+.repos {
+	//stuff
+}
+.footer {
+	//stuff
 }
