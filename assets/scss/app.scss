@@ -15,59 +15,62 @@ html {
 *, *:before, *:after {
   box-sizing: inherit;
 }
-.top-nav {
+
+// TOP OF THE PAGE
+.top {
 	background-color: $gray;
-	font-family: helvetica;
-	font-size: 14px;
-	text-align: center;
-	padding-top: 5px;
 	height: 50px;
 	border-bottom: darken($gray, 10%) solid 1px;
 }
+
+.mega-octicon {
+    position: relative;
+    top: 6px;
+    padding-left: 4em;
+    padding-right: .3em;
+}
+
 .search {
-	color: darken($gray, 10%);
-	width: 300px;
-	height: 25px;
-	border: darken($gray, 10%) solid 1px;
-	border-radius: 3px;
+    height: 2.5em;
+    width: 35em;
+    color: darken($gray, 30%);
+    border-radius: 3px;
+    background-color: white;
+    border: 1px solid darken($gray, 30%);
+    padding-left: 1em;
 }
+
 .top-links {
-	display: inline;
+    padding-left: 1em;
+    display: inline;
 }
-.main {
-	padding-top: 5em;
-	@include outer-container(1020px);
+
+.top-links li {
+    display: inline;
+    padding-right: .8em;
+    font-weight: bold;
+    font-size: .8em;
 }
-.left {
-	@include span-columns(3);
+
+.top-right, .top-right2, .top-right3 {
+    display: inline;
+    word-spacing: 1px;
 }
-.left-one {
-	//stuff
+.top-right {
+    padding-left: 15em;
 }
-.left-one img {
-	width: 250px;
+.top-right2 {
+    padding-left: 1em;
 }
-.left-two {
-	//stuff
+.top-right3 {
+    padding-left: 1em;
 }
-.top-main {
-	//stuff
+.top-right3 img {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
 }
-.top-main-links {
-	display: inline;
-}
-.search2 {
-	color: darken($gray, 10%);
-	border: darken($gray, 10%) solid 1px;
-	border-radius: 3px;
-	display: block;
-}
-.main-search {
-	display: inline;
-}
-.repos {
-	//stuff
-}
-.footer {
-	//stuff
-}
+
+// SIDEBAR
+
+
