@@ -11,6 +11,7 @@
   url: apiUrl,
   success: function(data) {
     var ht = p(data);
+
     $('.profile').html(ht);
   }
 	});

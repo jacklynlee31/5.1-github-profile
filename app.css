@@ -58,54 +58,231 @@ html {
 *, *:before, *:after {
   box-sizing: inherit; }
 
-.top-nav {
+.top {
   background-color: #F2F2F2;
-  font-family: helvetica;
-  font-size: 14px;
-  text-align: center;
-  padding-top: 5px;
   height: 50px;
   border-bottom: #d8d8d8 solid 1px; }
 
+.mega-octicon {
+  position: relative;
+  top: 6px;
+  padding-left: 4em;
+  padding-right: .3em; }
+
 .search {
-  color: #d8d8d8;
-  width: 300px;
-  height: 25px;
-  border: #d8d8d8 solid 1px;
-  border-radius: 3px; }
+  height: 2.5em;
+  width: 35em;
+  color: #a5a5a5;
+  border-radius: 3px;
+  background-color: white;
+  border: 1px solid #a5a5a5;
+  padding-left: 1em; }
 
 .top-links {
+  padding-left: 1em;
   display: inline; }
 
+.top-links li {
+  display: inline;
+  padding-right: .8em;
+  font-weight: bold;
+  font-size: .8em; }
+
+.top-right, .top-right2, .top-right3 {
+  display: inline;
+  word-spacing: 1px; }
+
+.top-right {
+  padding-left: 15em; }
+
+.top-right2 {
+  padding-left: 1em; }
+
+.top-right3 {
+  padding-left: 1em; }
+
+.top-right3 img {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle; }
+
 .main {
-  padding-top: 5em;
-  max-width: 1020px;
+  max-width: 1040px;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  margin-top: 1.5em; }
   .main::after {
     clear: both;
     content: "";
     display: table; }
 
-.left {
+.sidebar {
   float: left;
   display: block;
   margin-right: 2.35765%;
   width: 23.23176%; }
-  .left:last-child {
+  .sidebar:last-child {
     margin-right: 0; }
 
-.left-one img {
-  width: 250px; }
+.profile img {
+  width: 230px;
+  height: 230px;
+  border-radius: 6px; }
 
-.top-main-links {
+.name {
+  font-size: 26px;
+  display: block;
+  font-weight: bold; }
+
+.login {
+  font-size: 20px;
+  color: #666666;
+  padding-bottom: 1em; }
+
+.prof-3 {
+  border-top: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  color: #666666; }
+
+.prof-3 p {
+  color: black;
+  font-size: 14px;
+  display: inline;
+  font-family: sans-serif; }
+
+.prof-3 a {
+  color: #3262B3;
+  text-decoration: none;
+  font-family: sans-serif; }
+
+.prof-3 span {
+  display: block;
+  line-height: 1.5em; }
+
+.prof-4 {
+  text-align: center;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  border-bottom: 1px solid #eeeeee; }
+
+.num-4 {
+  color: #3262B3;
+  font-size: 28px;
+  font-weight: bold;
+  word-spacing: 2em; }
+
+.text-4 {
+  font-size: 11px;
+  word-spacing: 3em; }
+
+.repo {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 74.41059%; }
+  .repo:last-child {
+    margin-right: 0; }
+
+.tabs {
+  color: #666666;
+  padding-bottom: 1em; }
+
+.tabs p {
+  color: black;
+  display: inline;
+  font-family: arial;
+  font-size: 14px; }
+
+.tabs .octicon {
+  padding-left: 1em; }
+
+.find {
+  height: 2em;
+  width: 18em;
+  color: #a5a5a5;
+  border-radius: 3px;
+  background-color: white;
+  border: 1px solid #e5e5e5;
+  font-size: 14px;
+  padding: 1em; }
+
+.repo-search {
+  vertical-align: middle;
+  height: 2.7em;
+  font-size: 12px;
+  padding-left: 1em;
+  padding-right: 1em;
+  font-weight: bold;
+  background-color: #eeeeee;
+  background: linear-gradient(#fcfcfc, #eeeeee);
+  border: 1px solid #d5d5d5;
+  border-radius: 3px;
+  text-align: center;
   display: inline; }
 
-.search2 {
-  color: #d8d8d8;
-  border: #d8d8d8 solid 1px;
+.repo-main1 p {
+  padding-left: 2em;
+  padding-right: 1em;
+  display: inline;
+  font-size: 14px;
+  color: #3262B3;
+  word-spacing: 1em; }
+
+.new {
+  vertical-align: middle;
+  height: 2.7em;
+  padding-left: 1em;
+  padding-right: 1em;
+  color: white;
+  background-color: #79D758;
+  background: linear-gradient(#8add6d, #60b044);
+  border: 1px solid #d5d5d5;
   border-radius: 3px;
+  text-align: center;
+  display: inline; }
+
+.repo-main1 {
+  border-top: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+  padding-top: 1em;
+  padding-bottom: 1em; }
+
+.repo-main2 span {
   display: block; }
 
-.main-search {
+.r-name {
+  color: #3262B3;
+  font-weight: bold;
+  font-size: 20px;
+  padding-top: 1em; }
+
+.update {
+  color: #a5a5a5;
+  padding-top: 1em;
+  font-size: 12px;
+  padding-bottom: 1.5em;
+  border-bottom: 1px solid #eeeeee; }
+
+.footer {
+  border-top: 1px solid #eeeeee;
+  padding-top: 2em;
+  color: #a5a5a5;
+  font-size: 12px;
+  text-align: center; }
+
+.footer a {
+  text-align: center;
+  display: inline;
+  font-size: 12px;
+  text-decoration: none;
+  color: #a5a5a5; }
+
+.footer .octicon {
   display: inline; }
+
+.footer2 {
+  word-spacing: 1em;
+  padding-top: 1em;
+  padding-bottom: 1em; }
