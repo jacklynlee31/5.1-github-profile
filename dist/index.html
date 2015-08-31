@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    	<link rel="stylesheet" href="app.css">
+    	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/2.4.1/octicons.css">
+    <title>GitHub Profile</title>
+</head>
+<body>
+
+<div class="top-nav">
+	<!-- icon and search -->
+	<span class="mega-octicon octicon-mark-github"></span>
+	<input type="text" class="search" value="Search GitHub">
+	<!-- 3 links -->
+	<ul class="top-links">
+		<li>Pull Requests</li>
+		<li>Issues</li>
+		<li>Gist</li>
+	</ul>
+	<!-- top right icons -->
+	<span class="octicon octicon-inbox"></span>
+	<span class="octicon octicon-plus"></span>
+	<span class="octicon octicon-triangle-down"></span>
+	<!-- image goes here -->
+	<span class="octicon octicon-triangle-down"></span>
+</div>
+<div class="main">
+	<div class="left">
+		<div class="profile"></div>
+		<template id="profile-temp">
+			<div class="left-one">
+				<img src="{{ avatar_url }}" alt="profile-img">
+				<span class = "p-name">{{ name }}</span>
+				<span class = "p-blog">jacklynlee31</span>
+				<span class="octicon octicon-location"></span>
+				<span class = "p-location">{{ location }}</span>
+				<span class="octicon octicon-mail"></span>
+				<span class = "p-email">{{ email }}</span>
+				<span class="octicon octicon-clock"></span>
+				<span class	= "p-join">Joined on Jun 28, 2015</span>
+			</div>
+			<div class="left-two">
+				<p>0 Followers</p>
+				<p>0 Starred</p>
+				<p>0 Following</p>
+			</div>
+		</template>
+	</div>
+	<div class="top-main">
+		<span>Contributions</span>
+		<span>Repositories</span>
+		<span>Public Activity</span>
+		<button>Edit Profile</button>
+		<input type="text" class="search2" value="Find a repository...">
+		<button class="main-search">Search</button>
+		<ul class="top-main-links">
+			<li>All</li>
+			<li>Public</li>
+			<li>Private</li>
+			<li>Sources</li>
+			<li>Forks</li>
+			<li>Mirrors</li>
+		</ul>
+		<button class="new">New</button>
+	</div>
+	<div class="repos">
+		<div class="repo"></div>
+		<template id="repo-temp">
+			{{#each this as |repos|}}
+			<span class = "r-name">{{ repos.name }}</span>
+			<span>{{ repos.updated_at }}</span>
+			<span class = "r-lang">{{ repos.language }}</span>
+			<span class = "r-star">{{ repos.stargazers_count }}</span>
+			<span class = "r-fork">{{ repos.forks_count }}</span>
+			{{/each}}
+		</template>
+	</div>
+</div>
+<div class="footer">
+	<!-- footer stuff goes here -->
+</div>
+
+<script src="jquery/dist/jquery.min.js"></script>
+<script src="handlebars/handlebars.js"></script>
+<script src="app.js"></script>
+<!-- livereload snippet -->
+<script>document.write('<script src="http://'
+ + (location.host || 'localhost').split(':')[0]
+ + ':35729/livereload.js?snipver=1"><\/script>')
+</script>
+</body>
+</html>

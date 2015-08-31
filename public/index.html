@@ -3,10 +3,123 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    	<link rel="stylesheet" href="style.css">
+    	<link rel="stylesheet" href="app.css">
+    	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/2.4.1/octicons.css">
     <title>GitHub Profile</title>
 </head>
 <body>
 
+<!-- top gray bar -->
+<div class="top">
+	<div class="top-nav">
+        <span class="mega-octicon octicon-mark-github"></span>
+        <input type="text" class="search" value="Search GitHub">
+    <ul class="top-links">
+        <li>Pull Requests</li>
+        <li>Issues</li>
+        <li>Gist</li>
+    </ul>
+    <div class="top-right">
+        <span class="octicon octicon-inbox"></span>
+    </div>
+    <div class="top-right2">
+        <span class="octicon octicon-plus"></span>
+        <span class="octicon octicon-triangle-down"></span>
+    </div>
+    <div class="top-right3">
+        <img src="https://avatars1.githubusercontent.com/u/13090072?v=3&amp;s=40" alt="profile-img">
+        <span class="octicon octicon-triangle-down"></span>
+    </div>
+    </div>
+</div>
+
+<div class="main">
+    <div class="sidebar">
+        <div class="profile">
+            <template id="profile-temp">
+            <div class="prof-2">
+                <img src="{{avatar_url}}" alt="profile-img2">
+                <p class="name">{{name}}</p>
+                <p class="login">{{login}}</p>
+            </div>
+            <div class="prof-3">
+                <span class="octicon octicon-location">
+                <p>{{location}}</p>
+                <span class="octicon octicon-mail">
+                <a href="#">{{email}}</a>
+                <span class="octicon octicon-clock">
+                <p>Joined on Jun 28, 2015</p>
+            </div>
+            <div class="prof-4">
+                <p class="num-4">
+                    0
+                    0
+                    0
+                </p>
+                <p class="text-4">
+                    Followers
+                    Starred
+                    Following
+                </p>
+            </div>
+            </template>
+        </div>
+    </div>
+
+    <div class="repo">
+        <template id="repo-temp">
+            <div class="tabs">
+                <span class="octicon octicon-diff-added">
+                <p>Contributions</p>
+                <span class="octicon octicon-repo">
+                <p>Repositories</p>
+                <span class="octicon octicon-rss">
+                <p>Public activity</p>
+            </div>
+            <div class="repo-main">
+                <div class="repo-main1">
+                    <input type="text" class="find" value="Find a repository...">
+                    <button class="repo-search">Search</button>
+                    <p>All Public Private Sources Forks Mirrors</p>
+                    <button class="new">
+                    <span class="octicon octicon-repo">
+                    New
+                    </button>
+                </div>
+                <div class="repo-main2">
+                    {{#each this as |repos|}}
+                        <span class = "r-name">{{ repos.name }}</span>
+                        <span class="update">Updated a day ago</span>
+                    {{/each}}
+                </div>
+            </div>
+    </div>
+</div>
+        <div class="footer">
+            <div class="footer1">
+            <span class="octicon octicon-mark-github">
+                &#xA9; 2015 GitHub, Inc.
+            </div>
+            <div class="footer2">
+                <a href="#">Terms</a>
+                <a href="#">Privacy</a>
+                <a href="#">Security</a>
+                <a href="#">Contact</a>
+                <a href="#">Help</a>
+                <a href="#">Status</a>
+                <a href="#">API</a>
+                <a href="#">Training</a>
+                <a href="#">Shop</a>
+                <a href="#">Blog</a>
+                <a href="#">About</a>
+                <a href="#">Pricing</a>
+            </div>
+        </div>
+    </template>
+
+
+<script src="jquery/dist/jquery.min.js"></script>
+<script src="handlebars/handlebars.js"></script>
+<script src="app.js"></script>
 </body>
 </html>
